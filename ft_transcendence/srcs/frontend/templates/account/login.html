@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/account/login.css">
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card border-glow">
+                <div class="card-header text-center py-4">
+                    <h2 class="mb-0">Se connecter</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form id="login-form" onsubmit="LoginForm(event); return false;">
+                        <!-- Hidden honeypot fields -->
+                        <input type="text" name="username" style="position: absolute; left: -9999px;">
+                        <input type="password" name="password" style="position: absolute; left: -9999px;">
+                        
+                        <div class="mb-4">
+                            <label for="username_input" class="form-label">Nom d'utilisateur</label>
+                            <input class="form-control" type="text" id="username_input" required/>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <input class="form-control" type="password" id="password" required/> 
+                        </div>
+
+                        <div class="d-grid gap-2 mt-5">
+                            <button type="submit" class="btn btn-primary btn-lg py-3">Se connecter</button>
+                            <a class="btn btn-primary btn-lg" id="login_42">
+                                <span>Se connecter avec </span>
+                                <img src="/img/42_logo.svg" alt="42" style="height: 1em; vertical-align: middle;">
+                            </a>
+                            <a class="btn btn-primary btn-lg" data-link="/register">Créer un compte</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

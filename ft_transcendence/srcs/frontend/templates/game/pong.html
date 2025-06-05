@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/game/pong.css">
+</head>
+<body>
+    <canvas id="pongCanvas" width="800" height="400"></canvas>
+    <div id="button-wrapper" style="padding-top:1em;">
+		<a class="header_link" href="#" data-link="/" id="back_to_menu" style="visibility:hidden;">
+			<i class="fas fa-arrow-circle-left"></i> Back to Menu
+		</a>
+	</div>
+    <div id="player-turn"></div>
+	<div id="mobile-controls">
+		<button id="move-up"></button>
+		<button id="move-down"></button>
+	</div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>

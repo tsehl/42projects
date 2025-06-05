@@ -1,0 +1,5 @@
+.env
+.DS_Store
+srcs/data/
+srcs/backend/media/profile_pics/*
+!srcs/backend/media/profile_pics/default.png

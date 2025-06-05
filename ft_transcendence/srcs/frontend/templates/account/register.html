@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/account/register.css">
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card border-glow">
+                <div class="card-header text-center py-4">
+                    <h2 class="mb-0">Créer un compte</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form id="register-form">
+                        <div class="mb-4">
+                            <label for="username" class="form-label">Nom d'utilisateur</label>
+                            <input type="text" class="form-control" id="username" name="username" autocomplete="off" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" autocomplete="off" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <input type="password" class="form-control" id="password" name="password" autocomplete="off" required>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-5">
+                            <button type="submit" class="btn btn-primary btn-lg py-3">S'inscrire</button>
+                            <a class="btn btn-outline-primary btn-lg py-3" id="login_42">
+                                <span>S'inscrire avec </span>
+                                <img src="/img/42_logo.svg" alt="42" style="height: 1.2em; vertical-align: middle; margin-left: 5px;">
+                            </a>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <div class="login-link">
+                                <span>Déjà inscrit?</span>
+                                <a href="/login" class="btn btn-primary btn-lg ms-2">Se connecter</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

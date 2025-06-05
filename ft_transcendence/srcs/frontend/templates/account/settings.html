@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/css/account/settings.css">
+<div class="container">
+	<div class="row justify-content-center mt-5">
+		<div class="col-md-8">
+			<div class="card bg-dark border-primary">
+				<div class="card-header">
+					<h2 class="text-center mb-0">Paramètres du compte</h2>
+				</div>
+				<div class="card-body p-4">
+					<div id="message-container" class="mb-4" style="display: none;">
+						<div id="message" class="alert"></div>
+					</div>
+					<form id="settings-form">
+						<!-- Hidden fields -->
+						<input type="text" name="username_fake" style="display:none">
+						<input type="password" name="password" style="display:none">
+						
+						<div class="mb-3">
+							<label for="username_input" class="form-label">Nom d'utilisateur</label>
+							<input type="text" class="form-control" id="username_input" name="username" autocomplete="new-password">
+							<div class="error-message" id="username-error"></div>
+						</div>
+						
+						<div class="mb-3">
+							<label for="email" class="form-label">Email</label>
+							<input type="email" class="form-control" id="email" name="email" autocomplete="new-password">
+							<div class="error-message" id="email-error"></div>
+						</div>
+						
+						<div class="mb-4">
+							<label for="avatar" class="form-label">Avatar</label>
+							<input type="file" class="form-control" id="avatar" name="avatar" accept="image/*">
+							<div class="error-message" id="avatar-error"></div>
+						</div>
+						
+						<div class="border-top pt-4 mb-4" style="color: var(--primary-color)">
+							<h4 class="mb-3">Changer le mot de passe</h4>
+							
+							<div class="mb-3">
+								<label for="old_password" class="form-label">Ancien mot de passe</label>
+								<input type="password" class="form-control" id="old_password" name="old_password" autocomplete="new-password">
+								<div class="error-message" id="old-password-error"></div>
+							</div>
+							
+							<div class="mb-3">
+								<label for="new_password1" class="form-label">Nouveau mot de passe</label>
+								<input type="password" class="form-control" id="new_password1" name="new_password1" autocomplete="new-password">
+								<div class="error-message" id="new-password1-error"></div>
+							</div>
+							
+							<div class="mb-3">
+								<label for="new_password2" class="form-label">Confirmez le nouveau mot de passe</label>
+								<input type="password" class="form-control" id="new_password2" name="new_password2" autocomplete="new-password">
+								<div class="error-message" id="new-password2-error"></div>
+							</div>
+						</div>
+						
+						<div class="d-grid gap-2">
+							<button type="submit" class="btn btn-outline-primary btn-lg">Enregistrer les modifications</button>
+							<a class="btn btn-outline-primary btn-lg" id="login_42">
+								<span>Synchroniser avec </span>
+								<img src="/img/42_logo.svg" alt="42" style="height: 1em; vertical-align: middle;">
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

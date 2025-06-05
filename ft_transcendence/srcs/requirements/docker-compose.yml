@@ -1,0 +1,44 @@
+services:
+  db:
+    container_name: postgres
+    image: postgres
+    volumes:
+      - ../data/db:/var/lib/postgresql/data
+    env_file: ../../.env
+    networks:
+      - app-network
+
+
+  backend:
+    container_name: backend
+    build:
+      context: ./django
+    image: backend
+    volumes:
+      - ../backend/:/app
+    networks:
+      - app-network
+    env_file: ../../.env
+    depends_on:
+      - db
+  
+  
+  frontend:
+    container_name: frontend
+    build:
+      context: ./nginx
+    image: frontend
+    volumes:
+      - ../frontend/:/usr/share/nginx/html
+      - ../backend/media/:/app/media
+      - ../backend/staticfiles/:/app/staticfiles
+    ports:
+      - "${PORT}:443"
+    env_file: ../../.env
+    networks:
+      - app-network
+    depends_on:
+      - backend
+networks:
+  app-network:
+    driver: bridge
